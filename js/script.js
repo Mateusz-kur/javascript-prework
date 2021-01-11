@@ -35,9 +35,7 @@ function playGame(){
       printMessage('Remis!');
     } else if( argComputerMove == 'nożyce' && argPlayerMove == 'nożyce'){
       printMessage('Remis!');
-    }/* else( argPlayerMove == 'nieznany ruch'); {
-        printMessage( 'Przegrałeś walkowerem');
-    }*/
+    }
   }
 
   let randomNumber = Math.floor(Math.random() * 3 + 1);
@@ -45,29 +43,13 @@ function playGame(){
   console.log('Wylosowana liczba to: ' + randomNumber);
 
   let computerMove = getMoveName(randomNumber);
-  /*
-  if(randomNumber == 1){
-    computerMove = 'kamień';
-  } else if(randomNumber == 2){
-      computerMove = 'papier';
-  } else(randomNumber == 3);{
-      computerMove = 'nożyce';
-  }
-  */
+ 
   printMessage('Mój ruch to: ' + computerMove);
 
   console.log('Gracz wpisał: ' + playerInput);
 
   let playerMove = getMoveName(argMoveId);
-  /*
-  if(playerInput == '1'){
-    playerMove = 'kamień';
-  } else if(playerInput == 2) {
-      playerMove = 'papier';
-  } else(playerInput == 3); {
-      playerMove = 'nożyce';
-  }
-  */
+ 
   printMessage('Twój ruch to: ' + playerInput);
   displayResult();
 
