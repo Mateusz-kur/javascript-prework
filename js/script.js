@@ -5,12 +5,14 @@
     }
     const playerInput = getMoveName(argMoveId);
 
-    function getMoveName(argMoveId){ //funkcja anonimowa w stałej nie chciała działać, więc zostawiam tak.
-      if(argMoveId == 1){
+    const getMoveName = function(argMoveId) {
+      if (argMoveId == 1) {
         return 'kamień';
-      } else if(argMoveId == 2){
+      } else if (argMoveId == 2) {
         return 'papier';
-      } else(argMoveId == 3);{
+      }
+      else
+        (argMoveId == 3); {
         return 'nożyce';
       }
       printMessage('Nie znam ruchu o id ' + argMoveId + '.');
@@ -25,8 +27,6 @@
     printMessage('Mój ruch to: ' + computerMove);
 
     console.log('Gracz wpisał: ' + playerInput);
-
-    const playerMove = getMoveName(argMoveId);
   
     printMessage('Twój ruch to: ' + playerInput);
 
@@ -54,7 +54,7 @@
     }
     displayResult();
   }
-  document.getElementById('play-rock').addEventListener('click', function(){ //te funkcje są anonimowe, więc nic nie zmieniałęm.
+  document.getElementById('play-rock').addEventListener('click', function(){
     playGame(argMoveId = 1);
   });
   document.getElementById('play-paper').addEventListener('click', function(){
